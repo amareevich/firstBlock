@@ -35,6 +35,20 @@ main {
   align-items: center;
 }
 
+@-webkit-keyframes move {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 15px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
 @keyframes move {
   0% {
     top: 0px;
@@ -206,7 +220,8 @@ main {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    overscroll-behavior: contain;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
     pointer-events: auto;
     scrollbar-width: none;
     height: 40px;
@@ -440,7 +455,8 @@ main {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    overscroll-behavior: contain;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
     pointer-events: auto;
     scrollbar-width: none;
     height: 40px;
@@ -484,7 +500,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .content__p {
@@ -707,7 +724,7 @@ main {
     background-color: #F8F8F8;
   }
 
-  .content__textDiv>button>span {
+  .content__textDiv>button>span {   
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -738,10 +755,15 @@ main {
   }
 
   .content__button:hover>img {
-    animation-name: move;
-    animation-timing-function: ease;
-    animation-fill-mode: backwards;
-    animation-delay: 0ms;
-    animation-duration: 0.5s;
+    -webkit-animation-name: move;
+            animation-name: move;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-delay: 0ms;
+            animation-delay: 0ms;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
   }
 }
