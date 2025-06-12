@@ -35,6 +35,21 @@ main {
   align-items: center;
 }
 
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: 15px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+
 /* OTHER MEDIA --------------------------------------------------------------------------------------- */
 
 @media (min-width: 10px) and (max-width: 299px) {
@@ -697,6 +712,7 @@ main {
     line-height: 24px;
     letter-spacing: -0.2px;
     font-weight: 500;
+    padding-left: 40px;
   }
 
   @media (min-width: 1320px) {
@@ -712,4 +728,20 @@ main {
     }
   }
 
+  .content__button {
+    position: relative;
+  }
+
+  .content__button>img {
+    position: absolute;
+    left: 10px;
+  }
+
+  .content__button:hover>img {
+    animation-name: move;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0ms;
+    animation-duration: 0.5s;
+  }
 }
