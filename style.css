@@ -35,6 +35,18 @@ main {
   align-items: center;
 }
 
+/* OTHER MEDIA --------------------------------------------------------------------------------------- */
+
+@media (min-width: 10px) and (max-width: 299px) {
+  .header {
+    display: none;
+  }
+
+  .content {
+    display: none;
+  }
+}
+
 /* PHONE MEDIA --------------------------------------------------------------------------------------- */
 
 @media (min-width: 300px) and (max-width: 767px) {
